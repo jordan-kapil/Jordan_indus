@@ -1,0 +1,17 @@
+  #!/bin/bash
+
+<<Script
+We use this script for backing up the data
+Script
+src_dir="/c/Users/kapil/Downloads/shell_scripting/Month"
+tgt_dir="/c/Users/kapil/Downloads/shell_scripting/backup"
+
+backup_filename="backup_$(date +%d-%m-%Y).tar.gz"
+
+echo "Try to Backing up the file"
+
+echo "Backup started $backup_filename"
+
+tar -czvf "${tgt_dir}/${backup_filename}" "$src_dir"
+
+echo "backup copleted"
